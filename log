@@ -2,3 +2,14 @@ Sun 16 Oct 2022 11:39:26 PM UTC:
  tests:  0|4
 total_score: 0/70
 f42863c
+Sun 16 Oct 2022 11:43:44 PM UTC: 
+ heap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:40:8: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘HeapArray’; did you mean ‘heapArray’?
+   40 |   aux->HeapArray = (heapElem*)malloc(3*sizeof(heapElem));
+      |        ^~~~~~~~~
+      |        heapArray
+Compilation failed
+be31920
