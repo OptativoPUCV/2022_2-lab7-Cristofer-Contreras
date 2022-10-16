@@ -13,3 +13,18 @@ heap.c:40:8: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘He
       |        heapArray
 Compilation failed
 be31920
+Sun 16 Oct 2022 11:44:28 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:40:8: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘HeapArray’; did you mean ‘heapArray’?
+   40 |   aux->HeapArray = (heapElem*)malloc(3*sizeof(heapArray));
+      |        ^~~~~~~~~
+      |        heapArray
+heap.c:40:47: error: ‘heapArray’ undeclared (first use in this function)
+   40 |   aux->HeapArray = (heapElem*)malloc(3*sizeof(heapArray));
+      |                                               ^~~~~~~~~
+heap.c:40:47: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+77599c9
