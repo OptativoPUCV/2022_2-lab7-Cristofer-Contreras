@@ -40,3 +40,19 @@ Sun 16 Oct 2022 11:47:49 PM UTC:
  tests:  2|2
 total_score: 20/70
 f06c3e8
+Mon 17 Oct 2022 12:00:22 AM UTC: 
+ heap.c | 28 ++++++++++++++++++++++------
+ 1 file changed, 22 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:29:6: error: ‘pa’ undeclared (first use in this function); did you mean ‘pq’?
+   29 |   if(pa->size+1 > pa->capac){
+      |      ^~
+      |      pq
+heap.c:29:6: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:40:42: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘heaArray’; did you mean ‘heapArray’?
+   40 |     if(pq->heapArray[min].priority > pq->heaArray[max].priority){
+      |                                          ^~~~~~~~
+      |                                          heapArray
+Compilation failed
+23f5ee4
