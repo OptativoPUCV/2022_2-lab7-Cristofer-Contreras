@@ -37,7 +37,7 @@ void heap_push(Heap* pq, void* data, int priority){
   heapElem* elemAux = (heapElem*)malloc(sizeof(heapElem));
 
   while(min > 0){
-    if(pq->heapArray[min].priority > pq->heaArray[max].priority){
+    if(pq->heapArray[min].priority > pq->heapArray[max].priority){
       *elemAux = pq->heapArray[max];
       pq->heapArray[max] = pq->heapArray[min];
       pa->heapArray[min] = *elemAux;
