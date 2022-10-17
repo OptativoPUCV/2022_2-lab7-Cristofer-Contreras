@@ -102,3 +102,21 @@ Mon 17 Oct 2022 12:02:21 AM UTC:
  tests:  7|1
 total_score: 45/70
 9a96671
+Mon 17 Oct 2022 02:51:56 AM UTC: 
+ heap.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:58:70: error: ‘prio’ undeclared (first use in this function)
+   58 |   while(((current <= pq->size) && (pq->heapArray[current].priority > prio))||((current <= pq->size) && (pq->heapArray[current+1].priority > prio))){
+      |                                                                      ^~~~
+heap.c:58:70: note: each undeclared identifier is reported only once for each function it appears in
+In file included from test.c:4:
+heap.c:64:26: error: expected ‘;’ before ‘}’ token
+   64 |     current = 2*current+1
+      |                          ^
+      |                          ;
+   65 |   }
+      |   ~                       
+Compilation failed
+d72c1a6
