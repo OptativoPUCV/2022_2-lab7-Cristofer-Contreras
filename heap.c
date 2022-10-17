@@ -40,9 +40,12 @@ void heap_push(Heap* pq, void* data, int priority){
     if(pq->heapArray[min].priority > pq->heapArray[max].priority){
       *elemAux = pq->heapArray[max];
       pq->heapArray[max] = pq->heapArray[min];
-      pa->heapArray[min] = *elemAux;
+      pq->heapArray[min] = *elemAux;
     }
+    min = max;
+    max = (min-1)/2;
   }
+  pq->size++;
 }
 
 
