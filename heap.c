@@ -63,6 +63,9 @@ void heap_pop(Heap* pq){
     pq->heapArray[current] = aux;
     current = 2*current+1;
   }
+  {
+    
+  }
 }
     
 
